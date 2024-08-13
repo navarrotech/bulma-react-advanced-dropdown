@@ -17,14 +17,6 @@ npm install @navarrotech/bulma-react-advanced-dropdown
 yarn add @navarrotech/bulma-react-advanced-dropdown
 ```
 
-## Examples
-Multi selection:
-![Multi Selection](/examples/multi-select.png)
-Searchable:
-![Searchable](/examples/searchable.png)
-Goes full screen on mobile:
-![Mobile](/examples/mobile.png)
-
 ## Usage
 Here's an example of using it with just it's search functionality and base functionality:
 ```typescript
@@ -105,6 +97,18 @@ function MyLayout() {
 
 ## Fuzzy/smart searching
 Fuzzy search matching is done through [Fuse.js](https://www.fusejs.io/), a powerful & lightweight framework for fuzzy searching
+
+## Examples
+Multi selection:
+![Multi Selection](/examples/multi-select.png)
+
+
+Searchable:
+![Searchable](/examples/searchable.png)
+
+
+Goes full screen on mobile:
+![Mobile](/examples/mobile.png)
 
 ## Available props
 

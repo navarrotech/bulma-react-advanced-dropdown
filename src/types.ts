@@ -45,3 +45,7 @@ export type AdvancedSelectProps = {
 
   children: ReactNode // Dropdown trigger content
 }
+
+export type {
+  IFuseOptions
+}

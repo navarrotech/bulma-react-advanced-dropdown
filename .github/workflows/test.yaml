@@ -1,4 +1,4 @@
-// Copyright © 2024 Navarrotech
+# Copyright © 2024 Navarrotech
 
 name: Test and build
 
@@ -61,13 +61,13 @@ jobs:
           key: ${{ runner.os }}-dependencies-${{ hashFiles('**/yarn.lock') }}
 
       # Publish package to NPM registry (if on main branch only)
-      - name: Publish to npm
-        if: github.ref == 'refs/heads/main'
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - name: Publish to npm
+      #   if: github.ref == 'refs/heads/main'
+      #   run: npm publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      # Cleanup NPM from publishing
-      - name: Clean up npm cache
-        if: github.ref == 'refs/heads/main'
-        run: npm cache clean --force
+      # # Cleanup NPM from publishing
+      # - name: Clean up npm cache
+      #   if: github.ref == 'refs/heads/main'
+      #   run: npm cache clean --force
