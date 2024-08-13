@@ -1,0 +1,97 @@
+// Copyright © 2024 Navarrotech
+
+$tablet: 1024px !default
+$mobileHeight: 60vh !default
+
+.searchDropdownItem
+  padding: 0 0 1em 0 !important
+
+  .search
+    box-shadow: none !important
+
+  .clear
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0.4em
+
+.localIcon
+  display: inline-block
+  width: 1.2em
+  height: 1.2em
+  stroke-width: 0
+  stroke: currentColor
+  fill: currentColor
+  line-height: 1
+  position: relative
+  vertical-align: middle
+
+.dropdownItem
+  display: flex !important
+  align-items: center !important
+  gap: 0.75em
+
+.customIconAsImage
+  max-width: 1em
+
+.highlighted:not(:global(.is-active))
+  background-color: rgba(255, 255, 255, 0.1) !important
+
+@media only screen and (max-width: $tablet)
+  .dropdown
+    :global(.dropdown-menu)
+      display: block !important
+      position: fixed
+      top: 101vh
+      left: 0
+      right: 0
+      width: 100vw
+      height: $mobileHeight
+      transition: top 200ms ease-in-out
+      z-index: 1000
+
+      :global(.dropdown-content)
+        max-height: calc($mobileHeight - var(--bulma-dropdown-content-padding-top))
+        min-height: calc($mobileHeight - var(--bulma-dropdown-content-padding-top))
+        height: calc($mobileHeight - var(--bulma-dropdown-content-padding-top))
+
+        :global(.dropdown-wrapper)
+          max-height: 100%
+          overflow-y: auto
+
+        :global(.dropdown-item)
+          display: flex
+          align-items: center
+          justify-content: flex-start
+          gap: 0.5em
+          width: 100%
+
+          > :global(.field):not(:global(.has-addons))
+            width: 100%
+
+          :global(.dropdown-search),
+          :global(.dropdown-search) + :global(.icon)
+            font-size: 1rem !important
+
+    &:global(.is-active)
+      &::before
+        content: " "
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: rgba(255, 255, 255, 0.05)
+        backdrop-filter: blur(7px)
+        z-index: 999
+        pointer-events: none
+
+      :global(.dropdown-menu)
+        top: calc(100vh - $mobileHeight) !important
+
+  :global(.theme-light)
+    .dropdown:global(.is-active)::before
+      background: rgba(0, 0, 0, 0.5) !important

@@ -1,0 +1,12 @@
+{
+  "editor.codeActionsOnSave": {
+    // Tells VS Code to run ESLint on save
+    "source.fixAll.eslint": "always"
+  },
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "react"
+  ]
+}

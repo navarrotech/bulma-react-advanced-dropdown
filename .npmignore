@@ -1,0 +1,12 @@
+examples/
+.storybook/
+test/
+stories/
+tests/
+node_modules/
+.github/
+.vscode/
+
+vitest.config.ts
+test-results/
+.eslintrc.cjs

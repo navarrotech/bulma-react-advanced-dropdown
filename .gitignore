@@ -128,3 +128,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Dist is not necessary
+dist/
+test-results/
+
+*storybook.log

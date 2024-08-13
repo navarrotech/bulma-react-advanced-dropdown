@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "github.vscode-github-actions",
+    "chang196700.newline",
+    "syler.sass-indented",
+    "vitest.explorer",
+    "ms-vscode.vscode-typescript-next",
+    "dbaeumer.vscode-eslint",
+    "mrmlnc.vscode-scss",
+    "sibiraj-s.vscode-scss-formatter"
+  ]
+}
